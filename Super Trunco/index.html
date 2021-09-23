@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Super Trunco</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+        <script src="assets/js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="header--left">
+                    <div class="adicionarCarta">
+                        <h2>Adicione as suas cartas</h2>
+                        <div class="novaCarta">
+                            <p>Link da imagem:</p>
+                            <input name="input" id="link-imagem-jogador" type="text" placeholder="Coloque uma URL">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Nome da carta:</p>
+                            <input name="input" id="nome-carta-jogador" type="text">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Ataque (0-100):</p>
+                            <input name="input" id="ataque-carta-jogador" class="numero" type="number" min="0" max="100">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Defesa (0-100):</p>
+                            <input name="input" id="defesa-carta-jogador" class="numero" type="number" min="0" max="100">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Magia (0-100):</p>
+                            <input name="input" id="magia-carta-jogador" class="numero" type="number" min="0" max="100">
+                        </div>
+                        <div class="novaCarta">
+                            <button id="adicionar-carta-jogador" class="adicionar" onClick="adicionarCartaJogador()">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header--middle">
+                    <img src="https://th.bing.com/th/id/R.81b4178913938bcf128f0c23058eb2c3?rik=HCdwaS1gTdN2PQ&riu=http%3a%2f%2fimg3.clickjogos.com.br%2fdl%2f8%2f820bd0bbd8d3120f6e6fa7232d9e49d5%2fuolbig.png%3f1423701354&ehk=icjadXLcnZPJSw5Xsca%2f107PQerPpJ0z2ENFfUji5uY%3d&risl=&pid=ImgRaw&r=0" class="page-logo" alt="">
+                    <h1 class="page-title">Super Trunfo</h1>
+                    <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
+                </div>
+                <div class="header--right">
+                    <div class="adicionarCarta">
+                        <h2>Adicione as cartas da máquina</h2>
+                        <div class="novaCarta">
+                            <p>Link da imagem:</p>
+                            <input name="input" id="link-imagem-maquina" type="text" placeholder="Coloque uma URL">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Nome da carta:</p>
+                            <input name="input" id="nome-carta-maquina" type="text">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Ataque (0-100):</p>
+                            <input name="input" id="ataque-carta-maquina" class="numero" type="number" min="0" max="100">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Defesa (0-100):</p>
+                            <input name="input" id="defesa-carta-maquina" class="numero" type="number" min="0" max="100">
+                        </div>
+                        <div class="novaCarta">
+                            <p>Magia (0-100):</p>
+                            <input name="input" id="magia-carta-maquina" class="numero" type="number" min="0" max="100">
+                        </div>
+                        <div class="novaCarta">
+                            <button id="adicionar-carta-maquina" class="adicionar" onClick="adicionarCartaMaquina()">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <form id="form">
+                <div class="form--header">
+                    <div id="semCarta"></div>
+                    <h2>Escolha o seu atributo</h2>
+                </div>
+              
+              <div class="wrapper">
+                <div class="wrapper--div">
+                    <div id="deck-jogador"></div>
+                </div>
+                <div class="wrapper--div">
+                    <div id="carta-jogador">
+                        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">
+                    </div>
+                </div>
+                <div class="wrapper--div">
+                    <div id="carta-maquina" class="carta">
+                        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">
+                    </div>
+                </div>
+                <div class="wrapper--div">
+                    <div id="deck-maquina"></div>
+                </div>
+              </div>
+              <button class="button-jogar" type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+              <div id="resultado"></div>
+            </form>
+          </div>
+    </body>
+</html>
